@@ -2,7 +2,7 @@ import time
 
 
 
-#DIVIDER TAMPILAN MENU CONVERTER
+#DIVIDER TAMPILAN MENU UTAMA CONVERTER
 """MENU CONVERTER"""
 def menu() :
     while True:
@@ -47,7 +47,23 @@ def menu() :
                     proses_kelvin()
 
 
-
+#DIVIDER TAMPILAN MENU CELCIUS
+def menu_celcius():
+    while True:
+        print("======== KONVERSI CELCIUS ========")
+        print("1.Celcius Ke Reamur")
+        print("2.Celcius Ke Fahrenheit")
+        print("3.Celcius Ke Kelvin")
+        print("4.Kembali Ke Tampilan Menu Utama")
+        pilihan_celcius = input("Masukkan Pilihan Anda: ").lower()
+        if pilihan_celcius not in [
+            "1", "celcius ke reamur", "1.celcius ke reamur",
+            "2", "celcius ke fahrenheit", "2.celcius ke fahrenheit",
+            "3", "celcius ke kelvin", "3.celcius ke kelvin",
+            "4", "kembali", "kembali ke menu utama", "kembali ke tampilan menu utama", "4.kembali ke tampilan menu utama"
+        ]:
+            print("Harap Memilih Dengan Benar!!")
+            continue
 
 #DIVIDER CELCIUS
 
