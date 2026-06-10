@@ -27,6 +27,7 @@ def menu() :
                     "5", "keluar", "keluar converter", "5.keluar converter"
                 ]:
                     print("Terima kasih telah menggunakan converter kami:D")
+                    time.sleep(2)
                     break
                 elif pilihan in [
                     "1", "celcius", "1.celcius"
@@ -56,6 +57,7 @@ def input_suhu_celcius() :
         suhu_celcius = float(input("Masukkan Suhu Celcius: "))
         return suhu_celcius
     except ValueError:
+        print("Harus Masukkan Angka!!")
         return None
 
 
@@ -80,6 +82,7 @@ def input_suhu_reamur() :
         suhu_reamur = float(input("Masukkan Suhu Reamur: "))
         return suhu_reamur
     except ValueError:
+        print("Harus Masukkan Angka!!")
         return None
 
 """REAMUR TO CELCIUS"""
@@ -103,6 +106,7 @@ def input_suhu_fahrenheit() :
         suhu_fahrenheit = float(input("Masukkan Suhu Fahrenheit: "))
         return suhu_fahrenheit
     except ValueError:
+        print("Harus Masukkan Angka!!")
         return None
 
 """FAHRENHEIT TO CELCIUS"""
@@ -125,8 +129,12 @@ def fahrenheit_kelvin(suhu_fahrenheit):
 def input_suhu_kelvin():
     try:
         suhu_kelvin = float(input("Masukkan Suhu Kelvin: "))
+        if suhu_kelvin < 0:
+            print("Suhu Kelvin Tidak Boleh kurang Dari Nol!!")
+            return None
         return suhu_kelvin
-    except ValueError :
+    except ValueError:
+        print("Harus Masukkan Angka!!")
         return None
 
 """KELVIN TO CELCIUS"""
@@ -195,9 +203,8 @@ def output_hasil_kelvin(suhu_kelvin) :
 def proses_celcius():
     celcius = input_suhu_celcius()
     if celcius is None:
-        print("Harus Masukkan Angka!!")
-    else:
-        output_hasil_celcius(celcius)
+        return
+    output_hasil_celcius(celcius)
 
 #DIVIDER PROCESS REAMUR
 
@@ -205,27 +212,24 @@ def proses_celcius():
 def proses_reamur():
     reamur = input_suhu_reamur()
     if reamur is None:
-        print("Harus Masukkan Angka!!")
-    else:
-        output_hasil_reamur(reamur)
+        return
+    output_hasil_reamur(reamur)
 
 #DIVIDER PROCESS FAHRENHEIT
 """FAHRENHEIT PROCESS"""
 def proses_fahrenheit():
     fahrenheit = input_suhu_fahrenheit()
     if fahrenheit is None:
-        print("Harus Masukkan Angka!!")
-    else:
-        output_hasil_fahrenheit(fahrenheit)
+        return
+    output_hasil_fahrenheit(fahrenheit)
 
 #DIVIDER PROCESS KELVIN
 """KELVIN PROCESS"""
 def proses_kelvin() :
     kelvin = input_suhu_kelvin()
     if kelvin is None :
-        print("Harus Masukkan Angka!!")
-    else:
-        output_hasil_kelvin(kelvin)
+        return
+    output_hasil_kelvin(kelvin)
 
 
 
