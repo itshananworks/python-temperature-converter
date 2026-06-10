@@ -1,3 +1,53 @@
+import time
+
+
+
+#DIVIDER TAMPILAN MENU CONVERTER
+"""MENU CONVERTER"""
+def menu() :
+    while True:
+            print("======== KONVERTER SUHU ========")
+            print("1.Celcius")
+            print("2.Reamur")
+            print("3.Fahrenheit")
+            print("4.Kelvin")
+            print("5.Keluar Converter")
+            pilihan = input("Masukkan Pilihan Anda: ").lower()
+            if pilihan not in [
+                "1", "celcius", "1.celcius",
+                "2", "reamur", "2.reamur",
+                "3", "fahrenheit", "3.fahrenheit",
+                "4", "kelvin", "4.kelvin",
+                "5", "keluar", "keluar converter", "5.keluar converter"
+            ]:
+                print("Pilihan Tidak Valid")
+                continue
+            else:
+                if pilihan in [
+                    "5", "keluar", "keluar converter", "5.keluar converter"
+                ]:
+                    print("Terima kasih telah menggunakan converter kami:D")
+                    break
+                elif pilihan in [
+                    "1", "celcius", "1.celcius"
+                ]:
+                    proses_celcius()
+                elif pilihan in [
+                    "2", "reamur", "2.reamur"
+                ]:
+                    proses_reamur()
+                elif pilihan in [
+                    "3", "fahrenheit", "3.fahrenheit"
+                ]:
+                    proses_fahrenheit()
+                elif pilihan in [
+                    "4", "kelvin", "4.kelvin"
+                ]:
+                    proses_kelvin()
+
+
+
+
 #DIVIDER CELCIUS
 
 """INPUT SUHU/TEMPERATURE CELCIUS"""
@@ -180,7 +230,4 @@ def proses_kelvin() :
 
 
 
-proses_celcius()
-proses_reamur()
-proses_fahrenheit()
-proses_kelvin()
+menu()
