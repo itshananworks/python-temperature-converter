@@ -69,6 +69,27 @@ def fahrenheit_kelvin(suhu_fahrenheit):
 
 #DIVIDER
 
+"""INPUT SUHU KELVIN"""
+def input_suhu_kelvin():
+    try:
+        suhu_kelvin = float(input("Masukkan Suhu Kelvin: "))
+        return suhu_kelvin
+    except ValueError :
+        return None
+
+"""KELVIN TO CELCIUS"""
+def kelvin_celcius(suhu_kelvin) :
+    return suhu_kelvin - 273.15
+
+"""KELVIN TO REAMUR"""
+def kelvin_reamur(suhu_kelvin) :
+    return (4 / 5) * (suhu_kelvin - 273.15)
+
+"""KELVIN TO FAHRENHEIT"""
+def kelvin_fahrenheit(suhu_kelvin) :
+    hasil_celcius1 = kelvin_celcius(suhu_kelvin)
+    return (9 / 5 * hasil_celcius1) + 32
+
 
 
 
@@ -96,3 +117,4 @@ else:
     print(f"Hasil Reamur ke Celcius Adalah: {hasil_reamur_to_celcius:,.2f}")
     print(f"Hasil Reamur Ke Fahrenheit Adalah: {hasil_reamur_to_fahrenheit:,.2f}")
     print(f"Hasil Reamur Ke Kelvin Adalah: {hasil_reamur_to_kelvin:,.2f}")
+
