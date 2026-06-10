@@ -139,38 +139,48 @@ def output_hasil_kelvin(suhu_kelvin) :
     print(f"Hasil Kelvin Ke Fahrenheit Adalah: {hasil_kelvin_to_fahrenheit:,.2f}")
 
 
+#DIVIDER PROCESS CELCIUS
+
+"""CELCIUS PROCESS"""
+def proses_celcius():
+    celcius = input_suhu_celcius()
+    if celcius is None:
+        print("Harus Masukkan Angka!!")
+    else:
+        output_hasil_celcius(celcius)
+
+#DIVIDER PROCESS REAMUR
+
+"""REAMUR PROCESS"""
+def proses_reamur():
+    reamur = input_suhu_reamur()
+    if reamur is None:
+        print("Harus Masukkan Angka!!")
+    else:
+        output_hasil_reamur(reamur)
+
+#DIVIDER PROCESS FAHRENHEIT
+"""FAHRENHEIT PROCESS"""
+def proses_fahrenheit():
+    fahrenheit = input_suhu_fahrenheit()
+    if fahrenheit is None:
+        print("Harus Masukkan Angka!!")
+    else:
+        output_hasil_fahrenheit(fahrenheit)
+
+#DIVIDER PROCESS KELVIN
+"""KELVIN PROCESS"""
+def proses_kelvin() :
+    kelvin = input_suhu_kelvin()
+    if kelvin is None :
+        print("Harus Masukkan Angka!!")
+    else:
+        output_hasil_kelvin(kelvin)
 
 
 
 
-"""TEMPAT PROCESS"""
-
-celcius = input_suhu_celcius()
-if celcius is None:
-    print("Harus Masukkan Angka!!")
-else:
-    output_hasil_celcius(celcius)
-
-#DIVIDER
-
-reamur = input_suhu_reamur()
-if reamur is None:
-    print("Harus Masukkan Angka!!")
-else:
-    output_hasil_reamur(reamur)
-
-#DIVIDER
-
-fahrenheit = input_suhu_fahrenheit()
-if fahrenheit is None:
-    print("Harus Masukkan Angka!!")
-else:
-    output_hasil_fahrenheit(fahrenheit)
-
-#DIVIDER
-
-kelvin = input_suhu_kelvin()
-if kelvin is None:
-    print("Harus Masukkan Angka!!")
-else:
-    output_hasil_kelvin(kelvin)
+proses_celcius()
+proses_reamur()
+proses_fahrenheit()
+proses_kelvin()
