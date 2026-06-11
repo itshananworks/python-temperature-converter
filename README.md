@@ -1,16 +1,17 @@
 # Python Temperature Converter
 
-A simple Python mini project to convert Celsius temperature into:
+A simple Python mini project to convert temperatures between Celsius, Reamur, Fahrenheit, and Kelvin.
 
 * Reamur
 * Fahrenheit
 * Kelvin
+* Celsius
 
 ## Purpose
 
 This project is part of my learning journey in Python. I use mini projects like this to review concepts and track my progress over time.
 
-Concepts practiced in this project:
+## Concepts practiced in this project:
 
 * Functions
 * Parameters and return values
@@ -18,20 +19,23 @@ Concepts practiced in this project:
 * Using `None` to handle invalid input
 * Basic mathematical operations
 * Code refactoring from a raw version into reusable functions
+* Loops (`while`)
+* Conditional statements (`if`, `elif`, `else`)
 
 ## Current Features
 
-* Convert Celsius to Reamur
-* Convert Celsius to Fahrenheit
-* Convert Celsius to Kelvin
-* Handle non-numeric input gracefully
+* Convert temperatures between Celsius, Reamur, Fahrenheit, and Kelvin
+* Menu-based temperature conversion system
+* Support repeated conversions using loops
+* Handle non-numeric input gracefully using `try-except`
+* Use `None` to prevent invalid input from crashing the program
+* Validate Kelvin input to prevent values below absolute zero
+* Organize the program using reusable functions
 
 ## Future Improvements
 
-* Add menu-based conversion choices
-* Allow repeated conversions using loops
-* Support conversions from other temperature scales
-* Improve program structure with a `main()` function
+No planned improvements at the moment.
+This project has achieved its original learning objectives.
 
 ## How to Run
 
@@ -42,7 +46,9 @@ Concepts practiced in this project:
 python converter.py
 ```
 
-3. Enter a Celsius temperature when prompted.
+3. Choose a temperature scale from the menu.
+4. Enter the temperature value.
+5. Select the target conversion.
 
 ## Notes
 
